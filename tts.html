@@ -1,0 +1,9 @@
+<input id="speakText" placeholder="Type something..." />
+<button onclick="speak()">🗣️ Speak</button>
+
+<script>
+function speak() {
+    const msg = new SpeechSynthesisUtterance(document.getElementById("speakText").value);
+    window.speechSynthesis.speak(msg);
+}
+</script>
